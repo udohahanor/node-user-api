@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRouter');
 
 
-//Port const
+//DOTENV const
 const PORT = 3001 || process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
 
