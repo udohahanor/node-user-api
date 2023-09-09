@@ -10,15 +10,12 @@ const userRoutes = require('./routes/userRouter');
 const PORT = 3001 || process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
 
-
 //ExpressMiddleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
 //routes
 app.use('/api/users', userRoutes);
-
 
 //Mongoose application connection
 mongoose.set("strictQuery", false);
