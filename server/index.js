@@ -14,6 +14,11 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+//homepage route
+app.get('/', (req, res) => {
+    res.send('Homepage');
+});
+
 //routes
 app.use('/api/users', userRoutes);
 
